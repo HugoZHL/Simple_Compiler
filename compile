@@ -1,0 +1,6 @@
+!#/bin/bash
+bison -yd v2.y
+flex v2.lex
+gcc y.tab.c lex.yy.c tigger2riscv.c -o riscv64
+cd tigger_file/
+bash compile
