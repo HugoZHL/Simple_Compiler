@@ -1,0 +1,7 @@
+!#/bin/bash
+bison -yd ./eeyore_file/v0.y
+flex ./eeyore_file/v0.lex
+gcc y.tab.c lex.yy.c ./eeyore_file/parse.c -o ../eeyore
+bison -yd v1.y
+flex v1.lex
+gcc y.tab.c lex.yy.c parse2tigger.c -o ../tigger
